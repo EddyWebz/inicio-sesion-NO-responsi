@@ -1,0 +1,273 @@
+/* Importar fuente */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1F1F1F; /* Fondo oscuro */
+}
+
+.container {
+  width: 800px;
+  height: 500px;
+  display: flex;
+  position: relative;
+  background-color: #333333; /* Fondo contenedor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+.container-form {
+  width: 100%;
+  overflow: hidden;
+}
+.container-form a {
+  text-decoration: none; /* Quitar subrayado */
+}
+
+.container-form form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-in;
+}
+
+.container-form h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #FFFFFF; /* Texto claro */
+}
+
+.social-networks {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.social-networks ion-icon {
+  border: 1px solid #555; /* Borde oscuro */
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  color: #A3A3A3; /* Iconos en tonos grises */
+}
+
+.social-networks ion-icon:hover {
+  color: #FFF; /* Iconos blanco al pasar el ratón */
+}
+
+.container-form span {
+  font-size: 12px;
+  margin-bottom: 15px;
+  color: #FFFFFF; /* Texto claro */
+}
+
+.container-input {
+  width: 300px;
+  height: 40px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0 15px;
+  background-color: #4B4F58; /* Fondo de entrada */
+  color: #FFFFFF; /* Texto de entrada */
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.container-input input {
+  border: none;
+  outline: none;
+  height: 100%;
+  background-color: inherit;
+  color: inherit; /* Texto heredado */
+}
+
+.container-input:hover {
+  background-color: #5C5F66; /* Fondo de entrada al pasar el ratón */
+}
+
+.container-form a {
+  color: #A3A3A3; /* Texto de enlace */
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.button {
+  width: 170px;
+  height: 45px;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #3AB397; /* Color naranja */
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #3AA8AD; /* Naranja más oscuro al pasar el ratón */
+  transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el ratón */
+}
+
+/* Animación de formulario */
+.sign-up {
+  transform: translateX(-100%);
+}
+
+.container.toggle .sign-in {
+  transform: translateX(100%);
+}
+
+.container.toggle .sign-up {
+  transform: translateX(0%);
+}
+
+/* Menú de bienvenida */
+.container-welcome {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transform: translateX(100%); /* Posición inicial fuera de la vista */
+  background-color: #000000;
+  transition: transform 0.5s ease-in-out, border-radius 0.5s ease-in-out;
+  overflow: hidden;
+  border-radius: 50% 0 0 50%;
+}
+
+.container.toggle .container-welcome {
+  transform: translateX(0);
+  border-radius: 0 50% 50% 0;
+  background-color: #030303;
+}
+
+.container-welcome .welcome {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0 50px;
+  color: white;
+  transition: transform 0.5s ease-in-out;
+}
+
+.welcome-sign-in {
+  transform: translateX(100%);
+}
+
+.container-welcome h3 {
+  font-size: 40px;
+  color:#3AB397;
+  
+}
+
+.container-welcome p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.container-welcome .button {
+  border: 2px solid ;
+  background-color: transparent;
+}
+
+.container.toggle .welcome-sign-in {
+  transform: translateX(0);
+}
+
+.container.toggle .welcome-sign-up {
+  transform: translateX(-100%);
+}
+
+/* Efecto hover para los botones */
+.button:hover {
+  background-color: #2A9797; /* Cambia a un tono más oscuro de verde */
+  transform: scale(1.08); /* Aumenta ligeramente el tamaño */
+}
+
+/* Efecto hover para los campos de entrada */
+.container-input:hover {
+  background-color: #62666F; /* Cambia a un tono más claro de fondo */
+  transform: scale(1.02); /* Aumenta ligeramente el tamaño */
+}
+
+/* Efecto hover para los íconos de redes sociales */
+.social-networks ion-icon:hover {
+  color: #FFFFFF; /* Cambia el color a blanco */
+  background-color: #3AB397; /* Fondo verde cuando se pasa el ratón */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+/* Efecto hover para el texto "¿Olvidaste tu contraseña?" */
+.container-form a:hover {
+  color: #3AB397; /* Cambia el color del texto a verde */
+  text-decoration: underline; /* Añade subrayado al texto */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    text-decoration: none; /* Quitar subrayado */
+
+}
+
+
+/* Media Query para dispositivos con un ancho máximo de 768px */
+@media (max-width: 768px) {
+  .container {
+      width: 100%; /* Usa el 100% del ancho disponible */
+      height: 90%; /* Ajusta la altura para evitar el desbordamiento */
+  }
+
+  .container-form h2 {
+      font-size: 18px; /* Reducir un poco más el tamaño del título */
+  }
+
+  .container-form span {
+      font-size: 9px; /* Reducir aún más el tamaño del subtítulo */
+  }
+
+  .container-input {
+      width: 90%; 
+      height: 28px; /* Reducir la altura de los campos de entrada */
+  }
+
+  .container-input input {
+      font-size: 11px; /* Reducir el tamaño del texto en los campos de entrada */
+  }
+
+  .button {
+      width: 130px;
+      height: 35px;
+      font-size: 11px; /* Reducir el tamaño del texto en los botones */
+  }
+
+  .container-welcome h3 {
+      font-size: 20px; /* Reducir el tamaño del mensaje "¡Hola!" */
+  }
+
+  .container-welcome p {
+      font-size: 10px; /* Reducir el tamaño del texto debajo del "¡Hola!" */
+  }
+
+  .social-networks ion-icon {
+      padding: 4px;
+      font-size: 16px; /* Reducir el tamaño de los iconos de redes sociales */
+  }
+  
+}
